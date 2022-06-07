@@ -1,5 +1,9 @@
 import math
+#Cindy Juan 
+#CSCI 381 Data Analytics 
+#Homework 1
 
+#Problem 14 
 def collatzRule(num):
     if num%2 == 0:
         return num//2
@@ -20,6 +24,7 @@ def LongestCollatzChain():
             longestChainNum = i
     print(f'The Longest Collatz chain has a length of {longestChain} with starting number {longestChainNum}')
 
+#Problem 20
 def DigitSumof100Factorial():
     factorial = math.factorial(100)
     sum = 0
@@ -27,6 +32,7 @@ def DigitSumof100Factorial():
         sum += int(i)
     print (f'The sum of the digits of 100! is: {sum}')
 
+#problem 17
 def NumLetterset(num):
     Keypad = ['',
     'abc',
@@ -54,7 +60,7 @@ def SetCreate(Keypad, Powerset, digit):
             temp.append(i+j)
     return temp
 
-
+#problem 11
 def WaterTankArea(Heights):
     set = Heights.split(",")
     intSet = [int(num) for num in set]
@@ -76,6 +82,7 @@ def WaterTankArea(Heights):
     print(f'The max area for a Water tank from the given set is: {maxArea}')
 
 def main():
+    #input for problem 17
     bool = True
     while bool:
         num = input("please input your number (should not contain 1):")
@@ -83,10 +90,16 @@ def main():
             print('not a valid number')
         else:
             bool = False
+    #input for problem 11
     Heights = input("Please input a set of numbers seperated by , :")
+
+    #Finds longest Collatz chain for a starting number under 1 million
     LongestCollatzChain()
+    #Calculates the sum of the digits of 100!
     DigitSumof100Factorial()
+    #generates the powerset of letters from the given combination of digits
     NumLetterset(num)
+    #finds the largest area of a watertank with the dimensions provided in the set
     WaterTankArea(Heights)
 
 if __name__ == "__main__":
