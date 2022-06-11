@@ -49,17 +49,17 @@ for i in range(len(carsub)):
 print(HighNotLow)
 
 #(6)
-PriceMedL = [i for i in range(len(priceL)) if priceL[i]=='med']
-print(PriceMedL)
+PriceMedLC = [i for i in range(len(priceL)) if priceL[i]=='med']
+print(PriceMedLC)
 
 #(7)
-PassengerMedL = [passengerL[i] for i in PriceMedL]
-print(PassengerMedL)
+PassengerMedLC = [passengerL[i] for i in PriceMedL]
+print(PassengerMedLC)
 
 #(8)
 carsub = df.iloc[:,[0,1]].copy()
-HighNotLow = [i for i in range(len(carsub)) if (carsub['price'][i] == 'high') & (carsub['Maintenance cost'][i] != 'low')]
-print(HighNotLow)
+HighNotLowLC = [i for i in range(len(carsub)) if (carsub['price'][i] == 'high') & (carsub['Maintenance cost'][i] != 'low')]
+print(HighNotLowLC)
 
 #Nested List Comprehension
 nlist = [ [1, 2, 3], ['A', 'B', 'C'], [4, 5], ['D', 'E'] ]
